@@ -1,7 +1,7 @@
-<%= form_with scope: :article, local: true do |form| %>
+<%= form_with scope: :article, url: '/articles', local: true do |form| %>
   <p>
-    <%= form.label :title%>
-    <%= form.text_field :title%>
+    <%= form.label :title %>
+    <%= form.text_field :title %>
   </p>
 
   <p>
@@ -12,4 +12,4 @@
   <p>
     <%= form.submit "Save Article" %>
   </p>
-<%end%>
+<% end %>
