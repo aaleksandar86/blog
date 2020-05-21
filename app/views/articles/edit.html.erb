@@ -1,5 +1,8 @@
-<h1>New Article</h1>
+<h1>Edit Article</h1>
 
-<%= render 'form', article: @article, submit: 'Update Article' %>
+<%= render 'form',
+article: @article,
+submit: 'Update Article',
+cancel_path: article_path(@article) %>
 
 <%= link_to "Cancel", articles_path %>

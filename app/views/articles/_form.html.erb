@@ -1,3 +1,11 @@
+<%
+  if article.persisted?
+    cancel_path = article_path(article)
+  else
+    cancel_path = rooth_path
+  end
+%>
+
 <% if article.errors.any? %>
 <div id="error_explanation">
   <h2>
