@@ -25,8 +25,6 @@
       </div>
     </div>
 
-
-
     <div class="column is-6 is-offset-3">
       <%= form_with model: article, local: true do |form| %>
         <div class="field">
@@ -34,15 +32,16 @@
           <div class="control">
             <%= form.text_field :title, class: "input", placeholder: "Title" %>
           </div>
+          <% if article.errors.any? %>
+            <p class="help is-danger">This title is invalid</p>
+          <% end %>
         </div>
-
 
         <div class="field">
           <%= form.label :body, class: "label" %>
-
-          <div class="control">
-            <%= form.text_area :body, class: "textarea", placeholder: 'Your body' %>
-          </div>
+            <div class="control">
+              <%= form.text_area :body, class: "textarea", placeholder: 'Your body' %>
+            </div>
         </div>
 
         <div class="field is-grouped">
