@@ -11,8 +11,7 @@ class User < ApplicationRecord
                     uniqueness: true
   validates :password, presence: true, length: { minimum: 6 }
 
-  private<%= f.password_field :password %>
-  <%= f.password_field :password_confirmation %>
+  private
 
   def email_to_downcase
     self.email = email.downcase
