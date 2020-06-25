@@ -1,8 +1,5 @@
-<div class="container">
-  <div class="columns is-multiline">
-    <div class="column is-6 is-offset-3">
-      <div class="is-size-3">Edit <span class="has-text-weight-bold"><%= @article.title %></span>' comment</div>
-    </div>
-    <%= render 'form', article: @article, comment: @comment, submit_name: "Update", edit: true %>
-  </div>
-</div>
+<%= render 'form',
+  article: @article,
+  comment: @comment,
+  heading: "Edit #{@article.title}'s comment",
+  submit: "Update" %>
