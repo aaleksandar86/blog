@@ -3,10 +3,10 @@ module UserHelper
     visit login_path
 
     within('form') do
-      fill_in 'Email', with: user.email
-      fill_in 'Password', with: user.Password
+      fill_in "Email", with: user.email
+      fill_in "Password", with: user.password
 
-      click_on 'Log in'
+      click_on 'Log In'
     end
   end
 end
